@@ -4,7 +4,13 @@ on: push
 
 jobs: 
   build: 
+  
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: '5.0.x'
+
+ 
     steps:
       - name: Check out code 💩
         uses: actions/checkout@v2
